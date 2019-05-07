@@ -1,29 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Flex Test</title>
-	<link rel="stylesheet" href="index.css">
-</head>
-<body>
-
-	<section id="header">
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Flex Test</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
 		
-		<div id="header-container">
-			<div id="framea"></div>
-			<div id="content">
-				<div id="content-body">
-					<h1>Who we are</h1>
-				<p>We are who, and blah blah. Also blah blah bkah. we have done bkah blah bkah</p>
+		
+		
+		<div id="myslider">
+			
+			<div id="me">
+				<div id="iconcontainer">
+					
+					<div class="icon">
+						<i class="fas fa-palette"></i>
+					</div>
+					
+					<div id="des">
+						<h3>Web Design</h3>
+						<p>Hello, This is a Text</p>
+					</div>
+					
 				</div>
-			</div>
+			</div><!-- #me -->
+			
+			<div id="me">
+				<div id="iconcontainer">
+					
+					<div class="icon">
+						<i class="fab fa-wordpress"></i>
+					</div>
+					
+					<div id="des">
+						<h3>WordPress</h3>
+						<p>Hello, This is a Text</p>
+					</div>
+					
+				</div>
+			</div><!-- #me -->
+			
 		</div>
 		
-	</section>
-	
-	<script>
 		
-	</script>
-</body>
-</html>
+		<!--
+	<nav id="my-nav">
+		<div id="nav-brand">
+			<img src="bird.png" alt="logo">
+				<i>PK</i>
+		</div>
+		<ul>
+			<li>Home</li>
+			<li>Services</li>
+			<li>Contact Us</li>
+		</ul>
+		</nav>
+		<br>
+		<section id="header">
+			
+			<div id="header-container">
+				<div id="content">
+					
+						<h1>Who we are</h1>
+						<br>
+						<p>We are who, and blah blah. Also blah blah bkah. we have done bkah blah bkah.We are who, and blah blah. Also blah blah bkah. we have done bkah blah bkah.</p>
+						
+				</div>
+			</div>
+			
+		</section>
+		
+		<section id="main">
+			<h1>What We Offer</h1>
+			
+			<ul id="service-container">
+				
+				<li class="service">
+					<img src="1.jpg" alt="">
+					<span>Attractive Design</span>
+				</li>
+				
+				<li class="service">
+					<img src="2.jpg" alt="">
+					<span>High Performance</span>
+				</li>
+				
+				<li class="service">
+					<img src="3.jpg" alt="">
+					<span>Secure</span>
+				</li>
+				
+				</ul>
+				
+		</section>
+		
+		<section id="newservices">
+			<div class="newserviceentry">
+				<img src="1.jpg" alt="">
+					<span>Service - 1</span>
+			</div>
+			
+			<div class="newserviceentry">
+				<img src="2.jpg" alt="">
+					<span>Service - 2</span>
+			</div>
+			
+			<div class="newserviceentry">
+				<img src="3.jpg" alt="">
+					<span>Service - 3</span>
+			</div>
+			
+		</section>
+		
+		
+		<script>
+			ele = 0;
+			
+			const listElements = document.querySelectorAll('.service')
+			
+			function slide(){
+			listElements.forEach((e)=>{
+				e.style.display = "none"
+				listElements[ele].classList.remove("active")
+			})
+			
+			listElements[ele].style.display = "block"
+			listElements[ele].classList.add("active")
+			ele ++;
+			if(ele >= listElements.length){
+				ele = 0;
+			}
+			}
+			slide()
+			setInterval(slide, 5000)
+			/*
+			const cir = document.querySelector('#circ-ele')
+			const elem = document.querySelectorAll('.ele')
+			//cir.style.transform = "rotateZ(30deg)";
+			let a = 0
+			let ele_s = 0;
+			
+			function myrotate(){
+				a = a - 90
+				cir.style.transform = "rotateZ("+a+"deg)";
+				for(i=0;i<elem.length;i++){
+					elem[i].innerHTML = 'inActive'
+				}
+				elem[ele_s].innerHTML = 'Active'
+				ele_s++;
+				if(ele_s == elem.length){
+					ele_s = 0
+				}
+				elem.forEach((e)=>{
+					e.style.transform = "rotateZ("+(360-a)+"deg)";
+				})
+			}
+			setInterval(myrotate, 2000);
+			*/
+		</script>
+		-->
+	</body>
+	</html>
