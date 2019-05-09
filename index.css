@@ -1,15 +1,19 @@
-
+*, *::after, *::before {
+	box-sizing : border-box;
+}
 	body , html {
 		margin : 0;
 		padding : 0;
 		font-family : serif;
+		background-color : #ccc;
+		text-transform : capitalize;
 	}
 
 #myslider{
 	margin : 1em;
 	display : grid;
 	grid-gap : 20px;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 
@@ -65,6 +69,7 @@
 	position : absolute;
 	width : 100%;
 	height : 100%;
+	padding : 10px;
 	text-align : center;
 	top : 100%;
 	transition : 0.7s;
@@ -75,7 +80,7 @@
 	top : 40%;
 	opacity : 1;
 	width : 100%;
-	height : 65%;
+	height : 60%;
 }
 
 #myslider #me:before{
@@ -111,6 +116,7 @@
 	display : flex;
 	justify-content : space-between;
 	align-items : center;
+	box-shadow : 0 0 10px #000;
 }
 
 #my-nav #nav-brand {
@@ -118,15 +124,58 @@
 	align-items : center;
 }
 
+#my-nav #nav-brand #brand-text{
+	margin-left : 20px;
+	font-size : 2em;
+}
 #my-nav #nav-brand img{
 	height : 80px;
 	width : auto;
 	object-fit : cover;
 }
-i{
-	font-size : 2em;
-}
+
 #my-nav li {
 	display : inline-block;
 	padding-right : 10px;
+}
+
+#my-nav li a{
+	text-decoration : none;
+	color : #eee;
+	font-size : 1.1em;
+}
+
+#brief{
+	background-color : #004C44;
+	margin-top : 1em;
+	padding : 1em;
+}
+
+#brief h1{
+	color : #eee;
+	font-size : 50px;
+	text-align : center;
+	font-family: 'Lobster', cursive;
+}
+
+#brief p{
+	color : #eee;
+	font-size : 15px;
+	text-align : center;
+	font-family: 'Righteous', cursive;
+}
+
+#brief i{
+	font-size : 40px;
+	color : #fff;
+	text-align : center;
+	width : 100%;
+	
+}
+
+@media only screen and (max-width:400px){
+	#brief h1 {
+		font-size : 40px;
+		letter-spacing : 2px;
+	}
 }
