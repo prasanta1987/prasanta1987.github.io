@@ -2,6 +2,7 @@
 	box-sizing : border-box;
 }
 
+
 #container1{
 	width : 100%;
 }
@@ -124,7 +125,7 @@
 #my-nav {
 	//height : 80px;
 	background-color : #ccc;
-	background-image : linear-gradient(to bottom, #FF006F,#FD6800);
+	background-image : linear-gradient(to top right, #007F68,#008894);
 	color : #fff;
 	display : flex;
 	justify-content : space-between;
