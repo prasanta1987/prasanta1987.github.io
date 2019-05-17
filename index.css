@@ -1,12 +1,24 @@
 *, *::after, *::before {
 	box-sizing : border-box;
 }
+
+#container1{
+	width : 100%;
+}
+
+#container1 img {
+	height : 250px;
+	width : 100%;
+	object-fit : cover;
+}
+
 	body , html {
 		margin : 0;
 		padding : 0;
 		font-family : serif;
 		background-color : #ccc;
 		text-transform : capitalize;
+		scroll-behavior: smooth;
 	}
 
 #myslider{
@@ -19,8 +31,8 @@
 
 #myslider #me {
 	position : relative;
-	background-color : #06C89B;
-	abackground-image : linear-gradient(to top left, rgba(50,200,255,0.9), rgba(255,0,150,0.9));
+	abackground-color : #06C89B;
+	background-image : linear-gradient(to top left, #007F68,#008894);
 }
 
 
@@ -50,6 +62,7 @@
 	top : 10%;
 	left : calc(50% - 50px);
 }
+
 
 #myslider #me #iconcontainer .icon i{
 	position : absolute;
@@ -109,7 +122,7 @@
 
 
 #my-nav {
-	height : 80px;
+	//height : 80px;
 	background-color : #ccc;
 	background-image : linear-gradient(to bottom, #FF006F,#FD6800);
 	color : #fff;
@@ -117,6 +130,7 @@
 	justify-content : space-between;
 	align-items : center;
 	box-shadow : 0 0 10px #000;
+	z-index : 1;
 }
 
 #my-nav #nav-brand {
@@ -128,12 +142,54 @@
 	margin-left : 20px;
 	font-size : 2em;
 }
-#my-nav #nav-brand img{
-	height : 80px;
-	width : auto;
-	object-fit : cover;
+
+#my-nav #collaps{
+	display : none;
 }
 
+.float-menu {
+	display : block;
+}
+
+
+@media only screen and (max-width : 400px){
+
+	#my-nav {
+		flex-flow : column;
+	}
+	
+	#my-nav .float-menu{
+		display : none;
+	}
+	#my-nav ul{
+		left : 0;
+		top : 0;
+		z-index : 2;
+		position : fixed;
+		height : 100%;
+		width : 100%;
+		background-color : #000;
+		display : flex;
+		flex-flow : column;
+		justify-content : center;
+		align-items : center;
+		scroll : none;
+	}
+	
+	#my-nav #collaps{
+		display : block;
+		color : #fff;
+		z-index : 3;
+		position : fixed;
+		right : 10px;
+		top: 10px;
+	}
+	
+}
+#my-nav ul{
+	margin : 0;
+	padding : 0;
+}
 #my-nav li {
 	display : inline-block;
 	padding-right : 10px;
@@ -147,26 +203,28 @@
 
 #brief{
 	background-color : #004C44;
-	margin-top : 1em;
-	padding : 1em;
+	font-size : 25px;
+	margin : 1em 0;
+	padding : 0.5em;
 }
 
 #brief h1{
 	color : #eee;
-	font-size : 50px;
 	text-align : center;
 	font-family: 'Lobster', cursive;
+	margin : 0.5em;
+	font-size : 1.6em;
 }
 
 #brief p{
 	color : #eee;
-	font-size : 15px;
+	font-size : 1.3em;
 	text-align : center;
 	font-family: 'Righteous', cursive;
 }
 
 #brief i{
-	font-size : 40px;
+	font-size : 3em;
 	color : #fff;
 	text-align : center;
 	width : 100%;
@@ -175,7 +233,10 @@
 
 @media only screen and (max-width:400px){
 	#brief h1 {
-		font-size : 40px;
+		font-size : 1.5em;
 		letter-spacing : 2px;
+	}
+	#brief p{
+		font-size : 1em;
 	}
 }
