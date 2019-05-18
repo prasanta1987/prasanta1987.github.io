@@ -17,10 +17,9 @@
 		margin : 0;
 		padding : 0;
 		font-family : serif;
-		background-color : #ccc;
 		text-transform : capitalize;
-		scroll-behavior: smooth;
 	}
+
 
 #myslider{
 	margin : 1em;
