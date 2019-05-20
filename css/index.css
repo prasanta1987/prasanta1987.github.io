@@ -292,10 +292,11 @@
 }
 
 .slider-container .slider-body ul li .description {
-	top: 0;
+	top: 35%;
 	text-align: center;
 	display: none;
 	position: absolute;
+	place-items: center;
 	transform: scale(0);
 	animation: fadein 1s ease-in-out forwards;
 	background-color: #007F68;
@@ -312,6 +313,6 @@
 	to {
 		/* opacity: 1; */
 		transform: scale(1);
-		font-size: .02rem;
+		font-size: 3rem;
 	}
 }

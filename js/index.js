@@ -21,6 +21,7 @@ function makeCircle() {
     }
     circleEleDesc[elementPosition].style.display = 'grid'
     circleEleTitle[elementPosition].style.fontSize = '4rem'
+    circleEleTitle[elementPosition].style.backgroundColor = '#007f68'
 }
 
 makeCircle()
@@ -33,6 +34,7 @@ function rotate() {
         liDeg = titleAngles[d] - deg;
         circleEleTitle[d].style.transform = `rotate(${liDeg}deg)`
         circleEleTitle[d].style.fontSize = '2rem'
+        circleEleTitle[d].style.backgroundColor = 'rgba(0,0,0,0)'
         circleEleDesc[d].style.display = 'none'
     }
     ++elementPosition
@@ -41,6 +43,7 @@ function rotate() {
     }
     let currentPosition = elements - elementPosition;
     circleEleTitle[currentPosition].style.fontSize = '4rem'
+    circleEleTitle[currentPosition].style.backgroundColor = '#007f68'
     circleEleDesc[currentPosition].style.display = 'grid'
 }
 
