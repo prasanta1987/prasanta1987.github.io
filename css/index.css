@@ -85,6 +85,8 @@
 	top : 100%;
 	transition : 0.7s;
 	opacity : 0;
+	font-size : 1.5rem;
+	color : #fff;
 }
 
 #myservices #me #iconcontainer:hover #des {
@@ -120,8 +122,6 @@
 
 
 #my-nav {
-	height : 80px;
-	background-color : #ccc;
 	background-image : linear-gradient(to top right, #007F68,#008894);
 	color : #fff;
 	display : flex;
@@ -138,7 +138,7 @@
 
 #my-nav #nav-brand #brand-text{
 	margin-left : 20px;
-	font-size : 2em;
+	font-size : 3em;
 }
 
 #my-nav #collaps{
@@ -195,7 +195,7 @@
 #my-nav li a{
 	text-decoration : none;
 	color : #eee;
-	font-size : 1.1em;
+	font-size : 2em;
 }
 
 #brief{
