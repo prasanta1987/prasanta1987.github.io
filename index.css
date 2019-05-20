@@ -21,7 +21,7 @@
 	}
 
 
-#myslider{
+#myservices{
 	margin : 1em;
 	display : grid;
 	grid-gap : 20px;
@@ -29,31 +29,29 @@
 }
 
 
-#myslider #me {
+#myservices #me {
 	position : relative;
-	abackground-color : #06C89B;
 	background-image : linear-gradient(to top left, #007F68,#008894);
 }
 
 
-#myslider #me #iconcontainer{
+#myservices #me #iconcontainer{
 	width : 100%;
 	height : 300px;
 	position : relative;
 	overflow : hidden;
 }
 
-#myslider #me #iconcontainer .icon {
+#myservices #me #iconcontainer .icon {
 	position : absolute;
 	width : 100%;
 	height : 100%;
 	transition : 0.5s;
 	top : 0;
 	left : 0;
-	//background-color : rgba(0,0,0,0.5);
 }
 
-#myslider #me #iconcontainer:hover .icon{
+#myservices #me #iconcontainer:hover .icon{
 	position : absolute;
 	background-color : rgba(0,0,0,0.5);
 	border-radius : 50%;
@@ -64,7 +62,7 @@
 }
 
 
-#myslider #me #iconcontainer .icon i{
+#myservices #me #iconcontainer .icon i{
 	position : absolute;
 	top : 50%;
 	left : 50%;
@@ -74,11 +72,11 @@
 	color : #eee;
 }
 
-#myslider #me #iconcontainer:hover .icon i {
+#myservices #me #iconcontainer:hover .icon i {
 	font-size : 5em;
 }
 
-#myslider #me #iconcontainer #des{
+#myservices #me #iconcontainer #des{
 	position : absolute;
 	width : 100%;
 	height : 100%;
@@ -89,14 +87,14 @@
 	opacity : 0;
 }
 
-#myslider #me #iconcontainer:hover #des {
+#myservices #me #iconcontainer:hover #des {
 	top : 40%;
 	opacity : 1;
 	width : 100%;
 	height : 60%;
 }
 
-#myslider #me:before{
+#myservices #me:before{
 	content : '';
 	z-index : -1;
 	position : absolute;
@@ -108,7 +106,7 @@
 	box-shadow : 3px 10px 10px 0 #000;
 }
 
-#myslider #me:after{
+#myservices #me:after{
 	content : '';
 	z-index : -1;
 	position : absolute;
@@ -122,7 +120,7 @@
 
 
 #my-nav {
-	//height : 80px;
+	height : 80px;
 	background-color : #ccc;
 	background-image : linear-gradient(to top right, #007F68,#008894);
 	color : #fff;
@@ -173,7 +171,6 @@
 		flex-flow : column;
 		justify-content : center;
 		align-items : center;
-		scroll : none;
 	}
 	
 	#my-nav #collaps{
@@ -241,74 +238,76 @@
 	}
 }
 
+/* For Clicle Slider */
 
-.card-container {
-	padding : 10px;
-	width : 100%;
-	font-family: Serief;
- font-size: 25px;
- display: grid;
- place-items : center;
+.slider-container{
+	overflow: hidden;
+	background-color: #004C44;
+	display: grid;
+	place-items: center;
+	/* padding: 1rem; */
 }
 
-.card-container:hover .card-body{
-    transform: rotateY(.5turn);
+.slider-container .slider-body{
+	border-radius: 50%;
+	width: calc(100vh - 20vh);
+	height: calc(100vh - 20vh);
+	box-sizing: border-box;
+	transition: 1s;
 }
 
-
-.card-container .card-body{
-
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transition: 5s;
-    transform-style : preserve-3d;
+@media only screen and (max-width:400px){
+	.slider-container .slider-body{ width : 250px; height : 250px;}
+	html, body {
+		font-size: 10px;
+	}
 }
 
-
-.card-container .card-body .front , .card-container .card-body .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility : hidden ;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
+.slider-container .slider-body ul{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	display: grid;
 }
 
-.card-container .card-body .front {
-    background-image: url("girl.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size : cover;
+.slider-container .slider-body ul li {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: grid;
+	justify-items: center;
+	color: #fff;
 }
 
-.card-container .card-body .back {
-    background: #0076a1;
-    transform: rotateY(-180deg);
-    padding: 10px;
+.slider-container .slider-body ul li .title{
+	transition: 1s;
+	position: absolute;
+	font-size: 2rem;
 }
 
-.title{
-    position: absolute ;
-    transform: translateZ(100px);
-    color: #fff;
-    text-align: center ;
+.slider-container .slider-body ul li .description {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: none;
+	position: absolute;
+	place-items: center;
+	transform: scale(0);
+	animation: fadein 1s ease-in-out forwards;
 }
 
+@keyframes fadein{
+	form {
+		/* opacity: 0 */
+		transform: scale(0);
+	}
 
-.description {
-    color: #fff;
-    text-align: center;
-    font-size: .5em;
-    text-align:justify;
-}
-
-.box {
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    transform: translateZ(70px);
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 10px;
+	to {
+		/* opacity: 1; */
+		transform: scale(1);
+		font-size: 3rem;
+	}
 }

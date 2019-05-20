@@ -1,103 +1,93 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Flex Test</title>
-		<link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>
-			<script src="js/jquery.event.move.js" type="text/javascript"></script> <script src="js/jquery.twentytwenty.js" type="text/javascript"></script> <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="./index.css?ver=1.0.3">
-			
-	</head>
-	<body>
-	
-		<nav id="my-nav">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex Test</title>
+	<link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="./index.css?ver=1.0.3">
+
+</head>
+
+<body>
+
+	<nav id="my-nav">
 		<div id="nav-brand">
 			<!-- <img src="bird.png" alt="logo"> -->
-				<i id="brand-text">PK</i>
+			<i id="brand-text">PK</i>
 		</div>
 		<div class="float-menu">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="#myslider">Services</a></li>
-			<li><a href="#">Contact Us</a></li>
-		</ul>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="#myslider">Services</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
 		</div>
-		</nav>
-		
-		<section id="brief">
-			<i class="fas fa-quote-left"></i>
-			<h1>are you looking for a website!</h1>
-			<p>Then Your are at the right place.</p>
-			<i class="fas fa-quote-right"></i>
-		</section>
-		
-		<div id="ab">
-			<div id="container1">
-			<img src="before.jpg" />
-			<img src="after.jpg" />
+	</nav>
+
+	<section id="brief">
+		<i class="fas fa-quote-left"></i>
+		<h1>are you looking for a website!</h1>
+		<p>Then Your are at the right place.</p>
+		<i class="fas fa-quote-right"></i>
+	</section>
+
+
+	<div class="slider-container">
+		<div class="slider-body">
+			<ul class="list">
+
+				<li class="lElement">
+					<strong class="title">1</strong>
+					<span class="description">Titile ONE</span>
+				</li>
+
+				<li class="lElement">
+					<strong class="title">2</strong>
+					<span class="description">Titile TWO</span>
+				</li>
+
+				<li class="lElement">
+					<strong class="title">3</strong>
+					<span class="description">Titile THREE</span>
+				</li>
+
+				<li class="lElement">
+					<strong class="title">4</strong>
+					<span class="description">Titile Four</span>
+				</li>
+
+				<li class="lElement">
+					<strong class="title">5</strong>
+					<span class="description">Titile Five</span>
+				</li>
+
+				<li class="lElement">
+					<strong class="title">6</strong>
+					<span class="description">Titile Six</span>
+				</li>
+
+			</ul>
 		</div>
-		</div>
-		
-		
-		
-		<div class="card-container">
-            <div class="card-body">
-            
-                <div class="front">
-                <div class="box"></div>
-                    <h3 class="title">
-                        <p>3D Flip</p>
-                        <small>Hover Me</small>
-                    </h3>
-                </div>
-                
-                <div class="back">
-                    <p class="description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                </div>
-                
-            </div> <!-- .card-body -->
-        </div> <!-- .card-container -->
-		
-		<div id="myslider">
-			
-			<div id="me">
-				<div id="iconcontainer">
-					
-					<div class="icon">
-						<i class="fas fa-palette"></i>
-					</div>
-					
-					<div id="des">
-						<h3>Web Design</h3>
-						<p>
-						Hello, This is a Text
-						Hello, This is a Text
-						Hello, This is a Text
-						Hello, This is a Text
-						Hello, This is a Text
-						Hello, This is a Text
-						Hello, This is a Text
-						</p>
-					</div>
-					
+	</div>
+
+
+	<div id="myservices">
+
+		<div id="me">
+			<div id="iconcontainer">
+
+				<div class="icon">
+					<i class="fas fa-palette"></i>
 				</div>
-			</div><!-- #me -->
-			
-			<div id="me">
-				<div id="iconcontainer">
-					
-					<div class="icon">
-						<i class="fab fa-wordpress"></i>
-					</div>
-					
-					<div id="des">
-						<h3>WordPress</h3>
-						<p>
+
+				<div id="des">
+					<h3>Web Design</h3>
+					<p>
 						Hello, This is a Text
 						Hello, This is a Text
 						Hello, This is a Text
@@ -105,89 +95,40 @@
 						Hello, This is a Text
 						Hello, This is a Text
 						Hello, This is a Text
-						</p>
-					</div>
-					
+					</p>
 				</div>
-			</div><!-- #me -->
-			
-		</div>
-		
-		
-	
-		<script>
-			
-			
-			
-			
-			
-			/*
-			ele = 0;
-			
-			const listElements = document.querySelectorAll('.service')
-			
-			function slide(){
-			listElements.forEach((e)=>{
-				e.style.display = "none"
-				listElements[ele].classList.remove("active")
-			})
-			
-			listElements[ele].style.display = "block"
-			listElements[ele].classList.add("active")
-			ele ++;
-			if(ele >= listElements.length){
-				ele = 0;
-			}
-			}
-			slide()
-			setInterval(slide, 5000)
-	
-			const cir = document.querySelector('#circ-ele')
-			const elem = document.querySelectorAll('.ele')
-			//cir.style.transform = "rotateZ(30deg)";
-			let a = 0
-			let ele_s = 0;
-			
-			function myrotate(){
-				a = a - 90
-				cir.style.transform = "rotateZ("+a+"deg)";
-				for(i=0;i<elem.length;i++){
-					elem[i].innerHTML = 'inActive'
-				}
-				elem[ele_s].innerHTML = 'Active'
-				ele_s++;
-				if(ele_s == elem.length){
-					ele_s = 0
-				}
-				elem.forEach((e)=>{
-					e.style.transform = "rotateZ("+(360-a)+"deg)";
-				})
-			}
-			setInterval(myrotate, 2000);
-			*/
-			
-			$(document).ready(function(){
-			
-			$(function(){ $("#container1").twentytwenty();
-			
-			});
-			})
-			
-			/*
-			$(function(){ $(".twentytwenty-container").twentytwenty({
-				default_offset_pct: 0.7, // How much of the before image is visible when the page loads
-				orientation: 'vertical', // Orientation of the before and after images ('horizontal' or 'vertical')
-				before_label: 'January 2017', // Set a custom before label
-				after_label: 'March 2017', // Set a custom after label
-				no_overlay: true, //Do not show the overlay with before and after
-				move_slider_on_hover: true, // Move slider on mouse hover?
-				move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement.
-				click_to_move: false // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
-				
-				});
-				
-				});
-			*/
-		</script>
-	</body>
-	</html>
+
+			</div>
+		</div><!-- #me -->
+
+		<div id="me">
+			<div id="iconcontainer">
+
+				<div class="icon">
+					<i class="fab fa-wordpress"></i>
+				</div>
+
+				<div id="des">
+					<h3>WordPress</h3>
+					<p>
+						Hello, This is a Text
+						Hello, This is a Text
+						Hello, This is a Text
+						Hello, This is a Text
+						Hello, This is a Text
+						Hello, This is a Text
+						Hello, This is a Text
+					</p>
+				</div>
+
+			</div>
+		</div><!-- #me -->
+
+	</div>
+
+
+	<script src="js/index.js"></script>
+
+</body>
+
+</html>

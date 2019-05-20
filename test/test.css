@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #003a37;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+html .slider-container, body .slider-container {
+  overflow: hidden;
+}
+
+html .slider-container .slider-body, body .slider-container .slider-body {
+  border-radius: 50%;
+  width: calc(100vh - 20vh);
+  height: calc(100vh - 20vh);
+  min-width: 300px;
+  min-height: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html .slider-container .slider-body ul, body .slider-container .slider-body ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+html .slider-container .slider-body ul li, body .slider-container .slider-body ul li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  color: #fff;
+}
+
+html .slider-container .slider-body ul li .title, body .slider-container .slider-body ul li .title {
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+}
+
+html .slider-container .slider-body ul li .description, body .slider-container .slider-body ul li .description {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: none;
+  position: absolute;
+  place-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: fadein 1s ease-in-out forwards;
+          animation: fadein 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadein {
+  form {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    font-size: 3rem;
+  }
+}
+
+@keyframes fadein {
+  form {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=test.css.map */
