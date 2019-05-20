@@ -250,7 +250,7 @@
 
 .slider-container .slider-body{
 	border-radius: 50%;
-	width: calc(100vh - 20vh);
+	width: calc(100vw - 20vw);
 	height: calc(100vh - 20vh);
 	box-sizing: border-box;
 	transition: 1s;
