@@ -251,7 +251,9 @@
 .slider-container .slider-body{
 	border-radius: 50%;
 	width: calc(100vw - 10vw);
-	height: calc(100vh - 10vh);
+	height: calc(100vh - 50vh);
+	min-width : 250px;
+	min-height : 250px;
 	box-sizing: border-box;
 	transition: 1s;
 }
@@ -263,6 +265,13 @@
 	}
 }
 
+
+@media only screen and (max-height:500px){
+	.slider-container .slider-body{ width : 250px; height : 250px;}
+	html, body {
+		font-size: 10px;
+	}
+}
 .slider-container .slider-body ul{
 	width: 100%;
 	height: 100%;
@@ -286,9 +295,10 @@
 	transition: 1s;
 	position: absolute;
 	font-size: 2rem;
-	width: 4.5rem;
+	width: 5rem;
 	text-align: center;
 	border-radius: 50%;
+	font-weight : lighter;
 }
 
 .slider-container .slider-body ul li .description {

@@ -47,4 +47,4 @@ function rotate() {
     circleEleDesc[currentPosition].style.display = 'grid'
 }
 
-setInterval(rotate, 2000);
+setInterval(rotate, 5000);
