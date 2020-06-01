@@ -2,126 +2,129 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Flex Test</title>
-	<link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="./css/index.css?ver=1.0.5">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prasanta Karmakar</title>
 
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/icofont/icofont.min.css">
 </head>
 
 <body>
 
-	<nav id="my-nav">
-		<div id="nav-brand">
-			<!-- <img src="bird.png" alt="logo"> -->
-			<i id="brand-text">PK</i>
-		</div>
-		<div class="float-menu">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#myslider">Services</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
-		</div>
-	</nav>
+  <nav class="mynav">
+    <div class="navcontainer maxwidth plr5 m-auto">
+      <div class="brand">
+        <a href="/"><span>PK</span></a>
+      </div>
 
-	<section id="brief">
-		<i class="fas fa-quote-left"></i>
-		<h1>are you looking for a website!</h1>
-		<p>Then Your are at the right place.</p>
-		<i class="fas fa-quote-right"></i>
-	</section>
+      <div class="menu">
+        <div class="barcontainer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
 
+    </div>
+  </nav>
 
-	<div class="slider-container">
-		<div class="slider-body">
-			<ul class="list">
+  <header class="intro flexmid fullheight lazyImage" data-img="./assets/img/bg.jpg">
+    <div class="m-auto plr5 maxwidth">
 
-				<li class="lElement">
-					<strong class="title">1</strong>
-					<span class="description">Title ONE</span>
-				</li>
+      <h1 class="heading1"><small>i'm</small><br />Prasanta Karmakar</h1>
+      <p class="paragraph text-center para1">A Web Designer, Developer</p>
+      <!-- <div class="buttons">
+        <a href="#contact"><button>CONTACT US</button></a>
+      </div> -->
 
-				<li class="lElement">
-					<strong class="title">2</strong>
-					<span class="description">Titile TWO</span>
-				</li>
+    </div>
+  </header>
 
-				<li class="lElement">
-					<strong class="title">3</strong>
-					<span class="description">Titile THREE</span>
-				</li>
+  <section class="services pud5" id="service">
+    <div class="maxwidth plr5 m-auto">
+      <h1 class="subheading def-mt text-center">Our Services</h1>
 
-				<li class="lElement">
-					<strong class="title">4</strong>
-					<span class="description">Titile Four</span>
-				</li>
+      <div class="servicecontainer">
+        <div class="wordpress service">
+          <span class="icons">
+            <i class="icofont-brand-wordpress"></i>
+          </span>
+          <h3 class="subheading">Word Press</h3>
+          <p class="pud5 text-center paragraph">Websites driven by wordpress.</p>
+        </div>
 
-				<li class="lElement">
-					<strong class="title">5</strong>
-					<span class="description">Titile Five</span>
-				</li>
+        <div class="responsive service">
+          <span class="icons">
+            <i class="icofont-responsive"></i>
+          </span>
+          <h3 class="subheading">Responsive Web Design</h3>
+          <p class="pud5 text-center paragraph">Website powered by Word press</p>
+        </div>
 
-				<li class="lElement">
-					<strong class="title">6</strong>
-					<span class="description">Titile Six</span>
-				</li>
-				
-				<li class="lElement">
-					<strong class="title">7</strong>
-					<span class="description">Titile Seven</span>
-				</li>
-				
-			</ul>
-		</div>
-	</div>
+        <div class="webapp service">
+          <span class="icons">
+            <i class="icofont-code"></i>
+          </span>
+          <h3 class="subheading">Web App</h3>
+          <p class="pud5 text-center paragraph">Website powered by Word press</p>
+        </div>
 
+        <div class="dashboard service">
+          <span class="icons">
+            <i class="icofont-dashboard-web"></i>
+          </span>
+          <h3 class="subheading">Web dashboard</h3>
+          <p class="pud5 text-center paragraph">Website powered by Word press</p>
+        </div>
 
-	<div id="myservices">
+      </div>
 
-		<div id="me">
-			<div id="iconcontainer">
+    </div>
+  </section>
 
-				<div class="icon">
-					<i class="fas fa-palette"></i>
-				</div>
+  <section class="contact pud5" id="contact">
+    <div class="maxwidth plr5 m-auto text-center">
+      <h2 class="subheading">have Some Queries?</h2>
+      <div class="flexmid def-mt contact-form">
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your E-Mail" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button>SEND</button>
+      </div>
+      
+    </div>
+  </section>
 
-				<div id="des">
-					<h3>Web Design</h3>
-					<p>
-						Hello, This is a Text
-					</p>
-				</div>
+<!--  <div id="fb-root"></div>-->
+<!--  <div class="fb-customerchat"-->
+<!--    attribution=setup_tool-->
+<!--    page_id="105083944425925" theme_color="#4c4444">-->
+<!--  </div>-->
+        
+      <!-- <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
 
-			</div>
-		</div><!-- #me -->
-
-		<div id="me">
-			<div id="iconcontainer">
-
-				<div class="icon">
-					<i class="fab fa-wordpress"></i>
-				</div>
-
-				<div id="des">
-					<h3>WordPress</h3>
-					<p>
-						Hello, This is a Text
-					</p>
-				</div>
-
-			</div>
-		</div><!-- #me -->
-
-	</div>
-
-
-	<script src="js/index.js"></script>
-
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script> -->
+      
+  <script src="./assets/index.js"></script>
 </body>
 
 </html>

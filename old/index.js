@@ -12,7 +12,7 @@ let elementPosition = 0;
 let titleAngles = []
 
 function makeCircle() {
-    for (i = 0; i < elements; i++) {
+    for (let i = 0; i < elements; i++) {
         circleEle[i].style.transform = `rotate(${liDeg}deg)`
         titleDeg = 360 - liDeg;
         liDeg = liDeg + (360 / elements);
