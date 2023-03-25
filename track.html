@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS MAP</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script>
+        // const authToken = "pxQz7MAtK95eH0sl7LHjrPJFcAwj2UWk" //ESP8266
+        const authToken = "gppYI8SP-tAzlzeZvDjBtAWUnD1HRMwM" //ESP32
+
+    </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .leaflet-container {
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <script>
+
+        const myLocation = [21.86591, 83.99779];
+        const myMarker = {
+            color: '#000000',
+            fillColor: '#000000',
+            fillOpacity: 0.5,
+            radius: 10
+        }
+        const map = L.map('map').setView(myLocation, 17);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // const marker = L.marker([51.5, -0.09]).addTo(map)
+        //     .bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
+
+        const circle = L.circle(myLocation, myMarker).addTo(map).bindPopup('Your Location');
+
+        // const polygon = L.polygon([
+        //     [51.509, -0.08],
+        //     [51.503, -0.06],
+        //     [51.51, -0.047]
+        // ]).addTo(map).bindPopup('I am a polygon.');
+
+
+        // const popup = L.popup()
+        //     .setLatLng([51.513, -0.09])
+        //     .setContent('I am a standalone popup.')
+        //     .openOn(map);
+
+        // function onMapClick(e) {
+        //     popup
+        //         .setLatLng(e.latlng)
+        //         .setContent(`You clicked the map at ${e.latlng.toString()}`)
+        //         .openOn(map);
+        // }
+
+        // map.on('click', onMapClick);
+
+        // setTimeout(() => {
+        //     const updateMyLocation = L.circle([21.86892, 83.99781], myMarker).addTo(map)
+        // }, 10000)
+
+        const getGpsData = () => {
+
+            let finalHttpRequest = `https://blynk.cloud/external/api/get?token=${authToken}&v3&v4&v5&v6&v7`
+
+            fetch(finalHttpRequest)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    const updateMyLocation = L.circle([data.v3, data.v4], myMarker).addTo(map)
+                })
+                .catch(err => console.log(err))
+        }
+
+        setInterval(getGpsData, 5000);
+
+    </script>
+
+
+</body>
+
+</html>
