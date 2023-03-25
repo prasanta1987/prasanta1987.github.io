@@ -34,24 +34,18 @@
 <body>
     <div id="map"></div>
     <script>
-
-        const myLocation = [23.86591, 88.99779];
         const myMarker = {
             color: '#000000',
             fillColor: '#000000',
             fillOpacity: 0.5,
             radius: 10
         }
-        // const map = L.map('map').setView(myLocation, 17);
-        let map = L.map('map').fitWorld();
+
+        const map = L.map('map').fitWorld();
 
         const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            maxZoom: 19
         }).addTo(map);
-
-        // const circle = L.circle(myLocation, myMarker).addTo(map).bindPopup('Your Location');
-
 
         const getGpsData = () => {
 
@@ -62,6 +56,9 @@
                 .then(data => {
                     console.log(data)
                     let updatedLocation = [data.v3, data.v4];
+                    let altitude = data.v6;
+                    let sattelights = data.v5;
+                    let speedKMPH = data.v7;
                     const updatedView = map.setView(updatedLocation, 17);
                     const updateMyLocation = L.circle(updatedLocation, myMarker).addTo(map)
                 })
