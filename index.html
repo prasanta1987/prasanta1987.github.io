@@ -35,21 +35,22 @@
     <div id="map"></div>
     <script>
 
-        const myLocation = [21.86591, 83.99779];
+        const myLocation = [23.86591, 88.99779];
         const myMarker = {
             color: '#000000',
             fillColor: '#000000',
             fillOpacity: 0.5,
             radius: 10
         }
-        const map = L.map('map').setView(myLocation, 17);
+        // const map = L.map('map').setView(myLocation, 17);
+        let map = L.map('map').fitWorld();
 
         const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        const circle = L.circle(myLocation, myMarker).addTo(map).bindPopup('Your Location');
+        // const circle = L.circle(myLocation, myMarker).addTo(map).bindPopup('Your Location');
 
 
         const getGpsData = () => {
@@ -60,7 +61,9 @@
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
-                    const updateMyLocation = L.circle([data.v3, data.v4], myMarker).addTo(map)
+                    let updatedLocation = [data.v3, data.v4];
+                    const updatedView = map.setView(updatedLocation, 17);
+                    const updateMyLocation = L.circle(updatedLocation, myMarker).addTo(map)
                 })
                 .catch(err => console.log(err))
         }
