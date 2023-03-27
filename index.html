@@ -63,7 +63,7 @@
                     const updateMyLocation = L.circle(updatedLocation, myMarker).addTo(map)
                     var popup = L.popup()
                         .setLatLng(updatedLocation)
-                        .setContent(`Altitude: ${altitude} feet,<br> Speed: ${speedKMPH} KMph`)
+                        .setContent(`Altitude: ${altitude} feet<br>Speed: ${speedKMPH} KMph`)
                         .openOn(map);
                 })
                 .catch(err => console.log(err))
